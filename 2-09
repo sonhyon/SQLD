@@ -1,0 +1,38 @@
+| id | product | amount |
+| -- | ------- | ------ |
+| 1  | A       | 100    |
+| 2  | A       | NULL   |
+| 3  | A       | 200    |
+| 4  | B       | 300    |
+| 5  | B       | NULL   |
+
+❓문제
+다음 SQL 문을 실행했을 때의 결과는?
+SELECT product, SUM(amount) AS total_sales
+FROM sales
+GROUP BY product;
+
+A.
+| product | total\_sales |
+| ------- | ------------ |
+| A       | 300          |
+| B       | 300          |
+
+B.
+| product | total\_sales |
+| ------- | ------------ |
+| A       | NULL         |
+| B       | NULL         |
+
+C.
+| product | total\_sales |
+| ------- | ------------ |
+| A       | 300          |
+| B       | 0            |
+
+D.
+| product | total\_sales |
+| ------- | ------------ |
+| A       | 100          |
+| B       | 300          |
+
