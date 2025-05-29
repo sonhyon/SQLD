@@ -1,0 +1,35 @@
+🧠 문제: CASE 문법 검사
+다음 SQL 구문이 올바른 지문을 고르세요.
+SELECT 
+    customer_id,
+    CASE loc 
+        WHEN 'new york' THEN 'east'
+        WHEN 'los angeles' THEN 'west'
+        ELSE 'other'
+    END AS region
+FROM customers;
+
+보기
+A. 이 쿼리는 문법적으로 올바르며, 정상적으로 작동한다.
+
+B. CASE 구문에 문제가 있다. WHEN 다음에 조건이 빠져 있다.
+
+C. CASE 문에서 ELSE가 없으면 문법 오류가 발생한다.
+
+D. CASE loc WHEN 'new york' THEN 'east' 는 조건이 잘못 작성된 부분이다.
+
+
+-------------------------------------
+1. 단순 CASE 식 (Simple CASE)
+CASE 컬럼명
+  WHEN 값1 THEN 결과1
+  WHEN 값2 THEN 결과2
+  ELSE 결과3
+END
+
+2. 검색 CASE 식 (Searched CASE)
+CASE
+  WHEN 조건1 THEN 결과1
+  WHEN 조건2 THEN 결과2
+  ELSE 결과3
+END
