@@ -1,0 +1,26 @@
+❓문제
+각 고객의 총 주문 금액이 1000 이상인 고객을 조회하고 싶을 때, 다음 중 잘못된 SQL 문장은 무엇인가요?
+
+A.
+SELECT customer_id, SUM(amount) AS total
+FROM orders
+GROUP BY customer_id
+HAVING SUM(amount) >= 1000;
+
+B.
+SELECT customer_id, SUM(amount) AS total
+FROM orders
+WHERE SUM(amount) >= 1000
+GROUP BY customer_id;
+
+C.
+SELECT customer_id
+FROM orders
+GROUP BY customer_id
+HAVING SUM(amount) >= 1000;
+
+D.
+SELECT customer_id, SUM(amount)
+FROM orders
+GROUP BY customer_id
+HAVING SUM(amount) >= 1000;
